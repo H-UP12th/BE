@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: donutpot
+  profiles:
+    active: dev
+  jpa:
+    open-in-view: false
+    hibernate:
+      # 테이블은 docs/donutpot_erd.sql 기준. 엔티티가 ERD와 어긋나면 서버 시작 시 에러
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+cors:
+  allowed-origins: http://localhost:3000,http://localhost:5173
