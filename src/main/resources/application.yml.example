@@ -1,10 +1,13 @@
 spring:
   application:
     name: donutpot
-  profiles:
-    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/donutpot?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&createDatabaseIfNotExist=true
+    username: root
+    password: 본인_비밀번호
   jpa:
     open-in-view: false
+    show-sql: true
     hibernate:
       # 테이블은 docs/donutpot_erd.sql 기준. 엔티티가 ERD와 어긋나면 서버 시작 시 에러
       ddl-auto: validate
